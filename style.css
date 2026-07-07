@@ -284,3 +284,95 @@ HEADER
   color: #6b6178;
   line-height: 1.6;
 }
+.about {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 120px 24px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.section-label {
+  margin-bottom: 18px;
+  color: #7b4dff;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.about h2,
+.section-title h2,
+.news h2,
+.donation h2 {
+  font-size: 52px;
+  line-height: 1.18;
+  letter-spacing: -2px;
+  font-weight: 900;
+}
+
+.about > p {
+  padding: 44px;
+  border-radius: 34px;
+  background: linear-gradient(135deg, #f2ecff, #fff7ed);
+  color: #5d536c;
+  font-size: 19px;
+  line-height: 1.9;
+  box-shadow: 0 24px 70px rgba(91, 49, 168, 0.1);
+}
+
+.program {
+  padding: 120px 24px;
+  background: #f8f5ff;
+}
+
+.section-title {
+  max-width: 1180px;
+  margin: 0 auto 42px;
+}
+
+.program-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.program-card {
+  min-height: 310px;
+  padding: 38px;
+  border-radius: 34px;
+  background: white;
+  box-shadow: 0 24px 70px rgba(91, 49, 168, 0.1);
+  transition: 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 36px 90px rgba(91, 49, 168, 0.16);
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background: #f0e8ff;
+  font-size: 32px;
+}
+
+.program-card h3 {
+  margin-bottom: 16px;
+  font-size: 26px;
+}
+
+.program-card p {
+  color: #675c78;
+  font-size: 17px;
+  line-height: 1.7;
+}
