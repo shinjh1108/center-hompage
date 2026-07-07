@@ -85,12 +85,90 @@ body {
   color: #6d28d9;
 }
 .hero {
-  min-height: 78vh;
-  padding: 110px 8% 80px;
+  position: relative;
+  min-height: 88vh;
+  padding: 120px 8% 60px;
   text-align: center;
+  overflow: hidden;
   background:
-    radial-gradient(circle at 20% 20%, rgba(143, 75, 255, 0.22), transparent 32%),
-    radial-gradient(circle at 80% 10%, rgba(255, 183, 77, 0.18), transparent 30%);
+    linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.88)),
+    radial-gradient(circle at 18% 20%, rgba(124, 58, 237, 0.28), transparent 34%),
+    radial-gradient(circle at 82% 8%, rgba(255, 183, 77, 0.22), transparent 30%),
+    linear-gradient(135deg, #fbf8ff, #fff7ed);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  left: -160px;
+  top: 120px;
+  border-radius: 50%;
+  background: rgba(168, 85, 247, 0.12);
+  filter: blur(4px);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  bottom: 80px;
+  border-radius: 50%;
+  background: rgba(251, 146, 60, 0.14);
+  filter: blur(4px);
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.quick-links {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 80px auto 0;
+  max-width: 1120px;
+}
+
+.quick-links a {
+  padding: 26px;
+  text-align: left;
+  text-decoration: none;
+  color: #241631;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 18px 44px rgba(88, 28, 135, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quick-links a:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(88, 28, 135, 0.18);
+}
+
+.quick-links span {
+  color: #8b5cf6;
+  font-weight: 900;
+}
+
+.quick-links strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 21px;
+}
+
+.quick-links p {
+  color: #6b5d78;
+  font-size: 15px;
 }
 
 .badge {
@@ -213,4 +291,7 @@ footer {
   .cards {
     grid-template-columns: 1fr;
   }
+.quick-links {
+  grid-template-columns: 1fr;
+  margin-top: 50px;
 }
