@@ -1030,3 +1030,111 @@ margin-top:2px;
   background: white;
   color: #6D3CF5;
 }
+/* ======================
+   SUB PAGE
+====================== */
+
+.sub-page {
+  background: #fff;
+}
+
+.sub-hero {
+  min-height: 46vh;
+  padding: 160px 8% 80px;
+  background:
+    linear-gradient(135deg, rgba(123,77,255,.12), rgba(255,247,237,.9)),
+    #fff;
+}
+
+.sub-hero h1 {
+  margin-top: 14px;
+  font-size: 64px;
+  letter-spacing: -3px;
+  font-weight: 900;
+  color: #21152f;
+}
+
+.sub-hero p:last-child {
+  margin-top: 18px;
+  font-size: 20px;
+  color: #675c78;
+}
+
+.greeting-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 110px 24px 130px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+}
+
+.greeting-title span {
+  color: #7b4dff;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.greeting-title h2 {
+  margin-top: 18px;
+  font-size: 42px;
+  line-height: 1.35;
+  letter-spacing: -2px;
+}
+
+.greeting-content {
+  padding: 48px;
+  border-radius: 36px;
+  background: #f8f5ff;
+}
+
+.greeting-content p {
+  margin-bottom: 22px;
+  color: #4f455e;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.signature {
+  margin-top: 42px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(123,77,255,.16);
+  text-align: right;
+}
+
+.signature span {
+  display: block;
+  color: #766985;
+  font-weight: 700;
+}
+
+.signature strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 28px;
+  color: #21152f;
+}
+
+@media (max-width: 768px) {
+  .sub-hero {
+    padding: 140px 22px 70px;
+  }
+
+  .sub-hero h1 {
+    font-size: 46px;
+  }
+
+  .greeting-wrap {
+    grid-template-columns: 1fr;
+    padding: 80px 22px;
+    gap: 40px;
+  }
+
+  .greeting-title h2 {
+    font-size: 32px;
+  }
+
+  .greeting-content {
+    padding: 32px;
+  }
+}
