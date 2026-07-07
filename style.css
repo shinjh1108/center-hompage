@@ -632,3 +632,44 @@ SCROLL ANIMATION
     padding: 54px 22px;
   }
 }
+.stats {
+  max-width: 1180px;
+  margin: 0 auto 120px;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.stat-card {
+  padding: 34px 24px;
+  border-radius: 30px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(91, 49, 168, 0.1);
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 46px;
+  color: #7b4dff;
+  font-weight: 900;
+}
+
+.stat-card span {
+  display: block;
+  margin-top: 10px;
+  color: #5d536c;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 80px;
+  }
+
+  .stat-card strong {
+    font-size: 36px;
+  }
+}
