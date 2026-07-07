@@ -92,14 +92,13 @@ HEADER
   padding: 0 8%;
   color: white;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(20, 12, 35, 0.78) 0%,
-      rgba(20, 12, 35, 0.55) 42%,
-      rgba(20, 12, 35, 0.18) 100%
-    ),
-    url("images/hero.jpg") center center / cover no-repeat;
+background:
+linear-gradient(
+90deg,
+rgba(20,12,35,.75),
+rgba(20,12,35,.35)
+),
+url("hero.jpg") center center / cover no-repeat;
 }
 .hero h1 {
   max-width: 900px;
