@@ -463,3 +463,24 @@ HEADER
 .footer p {
   color: rgba(255, 255, 255, 0.68);
 }
+/* ===========================
+SCROLL ANIMATION
+=========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    transition:1s;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
