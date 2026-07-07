@@ -95,8 +95,8 @@ HEADER
 background:
 linear-gradient(
 90deg,
-rgba(20,12,35,.75),
-rgba(20,12,35,.35)
+rgba(20,12,35,.48),
+rgba(20,12,35,.10)
 ),
 url("hero.jpg") center center / cover no-repeat;
 }
