@@ -1547,3 +1547,104 @@ grid-template-columns:1fr;
 .program {
   margin-top: 40px;
 }
+/* ======================
+   HERO V2
+====================== */
+
+.hero-v2 {
+  min-height: 100vh;
+  padding: 0 8%;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20,12,35,.62) 0%,
+      rgba(20,12,35,.36) 45%,
+      rgba(20,12,35,.12) 100%
+    ),
+    url("hero.jpg") center 22% / cover no-repeat;
+}
+
+.hero-v2 .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 960px;
+}
+
+.hero-v2 h1 {
+  max-width: 980px;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1.18;
+  letter-spacing: -3px;
+  color: white;
+}
+
+.hero-v2 .hero-desc {
+  max-width: 720px;
+  color: rgba(255,255,255,.9);
+}
+
+.hero-v2 .eyebrow {
+  background: rgba(255,255,255,.14);
+  color: white;
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(14px);
+}
+
+.hero-side {
+  position: absolute;
+  right: 8%;
+  bottom: 72px;
+  z-index: 2;
+  color: white;
+  text-align: right;
+}
+
+.hero-side span {
+  display: block;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  opacity: .75;
+}
+
+.hero-side strong {
+  display: block;
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hero-v2 .scroll-guide {
+  z-index: 2;
+}
+
+.hero-v2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 36%, rgba(123,77,255,.22), transparent 28%),
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,.12), transparent 25%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero-v2 {
+    padding: 150px 22px 110px;
+    min-height: 94vh;
+    background-position: center center;
+  }
+
+  .hero-side {
+    right: 22px;
+    bottom: 36px;
+  }
+
+  .hero-side strong {
+    font-size: 38px;
+  }
+}
