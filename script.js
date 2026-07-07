@@ -26,24 +26,14 @@ revealElements.forEach(el=>observer.observe(el));
 // Header Scroll Effect
 // ==============================
 
-const header=document.querySelector(".header");
+cconst header = document.querySelector(".header");
 
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY>60){
-
-        header.style.height="74px";
-        header.style.background="rgba(255,255,255,.92)";
-        header.style.boxShadow="0 15px 40px rgba(0,0,0,.08)";
-
-    }else{
-
-        header.style.height="90px";
-        header.style.background="rgba(255,255,255,.65)";
-        header.style.boxShadow="none";
-
-    }
-
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
 const counters = document.querySelectorAll(".counter");
 
