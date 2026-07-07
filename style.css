@@ -98,7 +98,7 @@ linear-gradient(
 rgba(20,12,35,.48),
 rgba(20,12,35,.10)
 ),
-url("hero.jpg") center center / cover no-repeat;
+url("hero.jpg") center 30% / cover no-repeat;
 }
 .hero h1 {
   max-width: 900px;
