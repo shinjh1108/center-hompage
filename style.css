@@ -1241,3 +1241,100 @@ margin-top:2px;
     padding: 32px;
   }
 }
+/* ==========================
+CENTER MENU
+========================== */
+
+.center-menu{
+
+max-width:1200px;
+
+margin:90px auto 140px;
+
+padding:0 24px;
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+}
+
+.center-card{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:42px;
+
+border-radius:30px;
+
+background:white;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.center-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 30px 80px rgba(109,60,245,.15);
+
+}
+
+.center-card span{
+
+color:#7B4DFF;
+
+font-weight:900;
+
+}
+
+.center-card h3{
+
+margin:12px 0;
+
+font-size:28px;
+
+}
+
+.center-card p{
+
+color:#666;
+
+line-height:1.7;
+
+}
+
+.center-card strong{
+
+font-size:38px;
+
+color:#7B4DFF;
+
+transition:.3s;
+
+}
+
+.center-card:hover strong{
+
+transform:translateX(8px);
+
+}
+
+@media(max-width:768px){
+
+.center-menu{
+
+grid-template-columns:1fr;
+
+}
+
+}
