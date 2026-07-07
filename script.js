@@ -26,7 +26,7 @@ revealElements.forEach(el=>observer.observe(el));
 // Header Scroll Effect
 // ==============================
 
-cconst header = document.querySelector(".header");
+const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 60) {
