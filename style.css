@@ -27,13 +27,63 @@ body {
   font-size: 18px;
 }
 
-nav a {
-  margin-left: 24px;
-  color: #3b2b4f;
-  text-decoration: none;
-  font-weight: 600;
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
 }
 
+.menu {
+  position: relative;
+}
+
+.menu > a {
+  color: #3b2b4f;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 20px 0;
+  display: block;
+}
+
+.submenu {
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  min-width: 180px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(120, 72, 180, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(88, 28, 135, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.menu:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.submenu a {
+  display: block;
+  padding: 11px 12px;
+  border-radius: 12px;
+  color: #4b3b5f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.submenu a:hover {
+  background: #f3e8ff;
+  color: #6d28d9;
+}
 .hero {
   min-height: 78vh;
   padding: 110px 8% 80px;
@@ -144,13 +194,20 @@ footer {
     text-align: center;
   }
 
-  nav {
+  .nav {
     margin-top: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
-  nav a {
-    display: inline-block;
-    margin: 8px;
+  .menu > a {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .submenu {
+    display: none;
   }
 
   .cards {
