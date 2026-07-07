@@ -1533,3 +1533,17 @@ grid-template-columns:1fr;
     margin-top: 8px;
   }
 }
+/* MAIN LAYOUT REORDER TUNING */
+.home-info {
+  margin-top: -70px;
+  position: relative;
+  z-index: 10;
+}
+
+.quick {
+  margin-top: 0;
+}
+
+.program {
+  margin-top: 40px;
+}
