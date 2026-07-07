@@ -184,27 +184,87 @@ url("hero.jpg") center 22% / cover no-repeat;
   position: relative;
 }
 
-.menu > a {
-  display: block;
-  padding: 34px 0;
-  font-weight: 700;
-  color: #2b2238;
+.menu>a{
+
+display:flex;
+
+align-items:center;
+
+height:90px;
+
+padding:0 6px;
+
+font-weight:700;
+
+color:white;
+
+transition:.3s;
+
+position:relative;
+
+}
+.menu>a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:24px;
+
+width:0;
+
+height:3px;
+
+border-radius:20px;
+
+background:#8B5CF6;
+
+transition:.3s;
+
 }
 
-.submenu {
-  position: absolute;
-  top: 82px;
-  left: 50%;
-  transform: translateX(-50%) translateY(14px);
-  min-width: 180px;
-  padding: 14px;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 24px 60px rgba(80, 35, 160, 0.16);
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.28s ease;
+.menu:hover>a::after{
+
+width:100%;
+
+}
+
+.menu:hover>a{
+
+color:#A78BFA;
+
+}
+
+.submenu{
+
+position:absolute;
+
+top:88px;
+
+left:50%;
+
+transform:translateX(-50%) translateY(18px);
+
+width:230px;
+
+padding:14px;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(25px);
+
+border-radius:22px;
+
+box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
 }
 
 .menu:hover .submenu {
@@ -213,14 +273,32 @@ url("hero.jpg") center 22% / cover no-repeat;
   transform: translateX(-50%) translateY(0);
 }
 
-.submenu a {
-  display: block;
-  padding: 12px 14px;
-  border-radius: 12px;
-  color: #4c3b64;
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
+.submenu a{
+
+display:block;
+
+padding:14px 16px;
+
+border-radius:14px;
+
+font-size:15px;
+
+font-weight:600;
+
+transition:.25s;
+
+color:#444;
+
+}
+
+.submenu a:hover{
+
+background:#F3EDFF;
+
+color:#6D3CF5;
+
+padding-left:24px;
+
 }
 
 .submenu a:hover {
@@ -657,4 +735,69 @@ SCROLL ANIMATION
   .stat-card strong {
     font-size: 36px;
   }
+}
+/* ======================
+LOGO
+====================== */
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+}
+
+.logo-icon{
+
+width:54px;
+
+height:54px;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#8B5CF6,#6D3CF5);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+box-shadow:0 12px 28px rgba(109,60,245,.25);
+
+}
+
+.logo-text{
+
+display:flex;
+
+flex-direction:column;
+
+}
+
+.logo-text strong{
+
+font-size:18px;
+
+font-weight:800;
+
+color:white;
+
+}
+
+.logo-text span{
+
+font-size:11px;
+
+letter-spacing:2px;
+
+color:rgba(255,255,255,.75);
+
+margin-top:2px;
+
 }
