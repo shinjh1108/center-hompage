@@ -484,3 +484,151 @@ SCROLL ANIMATION
     transform:translateY(0);
 
 }
+/* ===========================
+   HOVER EFFECTS
+=========================== */
+
+.program-card,
+.quick-card,
+.news-list a {
+  will-change: transform;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.22);
+  transform: translateX(-120%) skewX(-20deg);
+  transition: 0.5s;
+}
+
+.btn:hover::after {
+  transform: translateX(120%) skewX(-20deg);
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 28px;
+  }
+
+  .nav {
+    gap: 22px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .quick {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about,
+  .news {
+    grid-template-columns: 1fr;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: auto !important;
+    min-height: 78px;
+    padding: 18px 20px;
+    display: block;
+    text-align: center;
+  }
+
+  .logo {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .menu > a {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .submenu {
+    display: none;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 92vh;
+    padding: 160px 22px 110px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  .quick {
+    margin: -60px auto 70px;
+    grid-template-columns: 1fr;
+  }
+
+  .about,
+  .program,
+  .news {
+    padding: 80px 22px;
+  }
+
+  .about h2,
+  .section-title h2,
+  .news h2,
+  .donation h2 {
+    font-size: 36px;
+  }
+
+  .about > p {
+    padding: 30px;
+    font-size: 17px;
+  }
+
+  .donation {
+    margin: 0 22px 80px;
+    padding: 64px 26px;
+    border-radius: 34px;
+  }
+
+  .footer {
+    padding: 54px 22px;
+  }
+}
