@@ -1,31 +1,21 @@
-// ==============================
-// Scroll Reveal Animation
-// ==============================
-
+// Scroll reveal
 const revealElements = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("active");
-
-        }
-
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
     });
+  },
+  { threshold: 0.15 }
+);
 
-},{
-    threshold:0.15
-});
-
-revealElements.forEach(el=>observer.observe(el));
+revealElements.forEach((element) => revealObserver.observe(element));
 
 
-// ==============================
-// Header Scroll Effect
-// ==============================
-
+// Header scroll effect
 const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
@@ -35,32 +25,38 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+
+// Counter animation
 const counters = document.querySelectorAll(".counter");
 
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
+const counterObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
 
-    const counter = entry.target;
-    const target = Number(counter.dataset.target);
-    let current = 0;
-    const increment = Math.max(1, Math.ceil(target / 80));
+      const counter = entry.target;
+      const target = Number(counter.dataset.target);
+      let current = 0;
+      const increment = Math.max(1, Math.ceil(target / 80));
 
-    const updateCounter = () => {
-      current += increment;
+      const updateCounter = () => {
+        current += increment;
 
-      if (current >= target) {
-        counter.textContent = target.toLocaleString();
-        return;
-      }
+        if (current >= target) {
+          counter.textContent = target.toLocaleString();
+          return;
+        }
 
-      counter.textContent = current.toLocaleString();
-      requestAnimationFrame(updateCounter);
-    };
+        counter.textContent = current.toLocaleString();
+        requestAnimationFrame(updateCounter);
+      };
 
-    updateCounter();
-    counterObserver.unobserve(counter);
-  });
-}, { threshold: 0.6 });
+      updateCounter();
+      counterObserver.unobserve(counter);
+    });
+  },
+  { threshold: 0.6 }
+);
 
-counters.forEach(counter => counterObserver.observe(counter));
+counters.forEach((counter) => counterObserver.observe(counter));
